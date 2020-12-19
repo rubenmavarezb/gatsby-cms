@@ -1,12 +1,20 @@
 import React from 'react';
+import { Link } from 'gatsby';
+import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 import Navigation from './nav'
+
+const ToHome = styled(Link)`
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+`;
 
 const Header = () => {
     return ( 
         <header
             css={css `
-                background-color: #222;
+                background-color: rgb(44,62,80);
                 padding: 1rem;
             `}
         >
@@ -22,12 +30,9 @@ const Header = () => {
                     }
                 `}
             >
-                <h1
-                    css={css `
-                        color: #fff;
-                        text-align: center;
-                    `}
-                >Gatsby Hotel</h1>
+                <ToHome to="/">
+                    <h1>Gatsby Hotel</h1>
+                </ToHome>
 
                 <Navigation/>
                 
